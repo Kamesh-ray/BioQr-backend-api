@@ -12,20 +12,18 @@ const generateQr = async (req, res) => {
       projects, experience, education
     } = bioData;
 
-  //  const userId = req.user.id;
-
     const sql = `
-  INSERT INTO bios
-  (name, age, email, phone, role, address, qualification, skills, tools, description, others, projects, experience, education)
-  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-`;
+      INSERT INTO bios
+      (name, age, email, phone, role, address, qualification, skills, tools, description, others, projects, experience, education)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `;
 
     db.query(sql, [
       name, age, email, phone, role, address, qualification,
       skills, tools, description, others,
-        JSON.stringify(projects || []),
-        JSON.stringify(experience || []),
-        JSON.stringify(education || [])
+      JSON.stringify(projects || []),
+      JSON.stringify(experience || []),
+      JSON.stringify(education || [])
     ], (err, result) => {
       if (err) {
         console.error("DB insert error:", err);
