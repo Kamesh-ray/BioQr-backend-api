@@ -12,7 +12,7 @@ const generateQr = async (req, res) => {
       projects, experience, education
     } = bioData;
 
-const userId = req.user.id;
+const userId = 1;
 
   const sql = `
   INSERT INTO bios
