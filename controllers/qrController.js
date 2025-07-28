@@ -21,7 +21,7 @@ const userId = 1;
 `;
 
     db.query(sql, [
-      userId, name, age, email, phone, role, address, qualification,
+      name, age, email, phone, role, address, qualification,
       skills, tools, description, others,
       JSON.stringify(projects),
       JSON.stringify(experience),
