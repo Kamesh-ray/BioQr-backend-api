@@ -16,7 +16,7 @@ const userId = 1;
 
   const sql = `
   INSERT INTO bios
-  (user_id, name, age, email, phone, role, address, qualification, skills, tools, description, others, projects, experience, education)
+  (name, age, email, phone, role, address, qualification, skills, tools, description, others, projects, experience, education)
   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 `;
 
